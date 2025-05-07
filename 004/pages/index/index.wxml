@@ -1,0 +1,86 @@
+<view class="container">
+  <!-- 顶部标题栏 + 操作按钮 -->
+  <view class="header">
+    <view class="title">选材中心</view>
+  </view>
+
+  <!-- 搜索框 -->
+  <view class="search-bar">
+    <input style="width: 700rpx"
+  class="search-input"
+  placeholder="搜索…"
+  bindinput="onSearchInput"
+  value="{{keyword}}"
+/>
+  </view>
+
+  <!-- 轮播图 -->
+  <swiper
+    indicator-dots="true"
+    autoplay="true"
+    interval="3000"
+    class="banner-swiper"
+   style="width: 700rpx; display: block; box-sizing: border-box">
+    <block wx:for="{{banners}}" wx:key="id">
+      <swiper-item>
+        <image
+          src="{{item.url}}"
+          mode="aspectFill"
+          class="banner-image"
+        />
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <!-- 温馨提示 -->
+  <view class="notice">
+    “素材存在少许颜色偏差，请以实物为准”
+  </view>
+
+  <!-- 分区标题 + 网格列表 -->
+  <view class="section">
+    <view class="section-title" style="width: 370rpx; display: flex; box-sizing: border-box; position: relative; left: 264rpx; top: -20rpx">
+      岩板专区
+      <text class="subtitle" style="position: relative; left: -181rpx; top: 35rpx">SINTERED STONE</text>
+    </view>
+    <view class="grid">
+      <block wx:for="{{items}}" wx:key="id">
+        <view
+          class="grid-item"
+          bindtap="onItemTap"
+          data-id="{{item.id}}"
+        >
+          <image
+            src="{{item.img}}"
+            mode="aspectFill"
+            class="grid-img"
+          />
+          <view class="grid-info">
+            <text>{{item.size}}</text>
+            <text>{{item.finish}}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+  <!-- 人造石专区 -->
+<view class="section">
+  <view class="section-title">
+    人造石专区
+    <text class="subtitle">Man-made Stone</text>
+  </view>
+  <view class="button-grid">
+    <block wx:for="{{manmadeItems}}" wx:key="id">
+      <button
+        class="manmade-btn"
+        bindtap="onManmadeTap"
+        data-path="{{item.path}}"
+      >
+        <view class="btn-title">{{item.title}}</view>
+        <view class="btn-subtitle">{{item.subtitle}}</view>
+      </button>
+    </block>
+  </view>
+</view>
+
+</view>

@@ -1,0 +1,28 @@
+<view class="container" style="width: 800rpx">
+  <!-- 区块标题 -->
+  <view class="section-title">
+    <view class="line" />
+    <text class="title">高端人造大理石</text>
+    <text class="subtitle">Man-made Stone</text>
+    <view class="line" />
+  </view>
+
+  <!-- 图片网格 -->
+  <view class="grid" style="width: 700rpx; position: relative; left: -25rpx; top: -8rpx">
+    <block wx:for="{{items}}" wx:for-item="item" wx:for-index="idx" wx:key="id">
+    <view
+      class="card"
+      bindtap="onPreview"
+      data-idx="{{idx}}"         
+    >
+        <image src="{{item.srcs[0]}}" mode="aspectFill" class="thumb" />
+        <!-- 右下角叠加层 -->
+        <view class="badge"><text>{{item.srcs.length}}张</text></view>
+        <text class="caption">{{item.title}}</text>
+      </view>
+    </block>
+  </view>
+
+  <!-- 回首页浮动按钮 -->
+  <button class="home-btn" bindtap="goHome">🏠</button>
+</view>

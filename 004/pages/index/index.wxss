@@ -1,0 +1,121 @@
+/** 外围容器 **/
+.container {
+  padding: 0 16rpx;
+}
+
+/** 标题栏 **/
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80rpx;
+}
+.title {
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.actions {
+  display: flex;
+}
+.btn {
+  margin-left: 20rpx;
+  font-size: 36rpx;
+}
+
+/** 搜索框 **/
+.search-bar {
+  margin: 20rpx 0;
+}
+.search-input {
+  width: 100%;
+  height: 60rpx;
+  padding: 0 20rpx;
+  border: 1rpx solid #ccc;
+  border-radius: 30rpx;
+}
+
+/** 轮播图 **/
+.banner-swiper {
+  height: 300rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+.banner-image {
+  width: 100%;
+  height: 100%;
+}
+
+/** 温馨提示 **/
+.notice {
+  text-align: center;
+  color: #999;
+  margin: 10rpx 0;
+}
+
+/** 分区 **/
+.section-title {
+  font-size: 30rpx;
+  font-weight: bold;
+  margin: 20rpx 0;
+  display: flex;
+  align-items: center;
+}
+.subtitle {
+  font-size: 24rpx;
+  color: #666;
+  margin-left: 20rpx;
+}
+
+/** 网格列表 **/
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.grid-item {
+  width: 48%;
+  margin-bottom: 20rpx;
+}
+.grid-img {
+  width: 100%;
+  height: 200rpx;
+  border-radius: 10rpx;
+}
+.grid-info {
+  text-align: center;
+  margin-top: 10rpx;
+}
+.grid-info text:nth-child(1) {
+  font-size: 28rpx;
+  font-weight: bold;
+}
+.grid-info text:nth-child(2) {
+  font-size: 24rpx;
+  color: #999;
+}
+/* 人造石按钮区域 */
+.button-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 40rpx;
+}
+.manmade-btn {
+  width: 48%;
+  background-color: #000;
+  padding: 30rpx 0;
+  border-radius: 12rpx;
+  margin-bottom: 20rpx;
+}
+.btn-title {
+  color: #fff;
+  font-size: 28rpx;
+  font-weight: bold;
+  text-align: center;
+}
+.btn-subtitle {
+  color: #fff;
+  font-size: 24rpx;
+  text-align: center;
+  margin-top: 10rpx;
+}

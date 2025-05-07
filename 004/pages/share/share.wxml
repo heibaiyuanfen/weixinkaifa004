@@ -1,0 +1,9 @@
+<view class="container">
+  <view class="btn-container">
+    <button open-type="share">分享到好友</button>
+    <button bindtap="onShareTimeline">分享到朋友圈</button>
+  </view>
+  <view class="tips">
+    点击按钮即可调用默认分享菜单
+  </view>
+</view>
